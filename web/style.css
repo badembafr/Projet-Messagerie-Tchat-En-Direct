@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.bas {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.top{
+    text-align: center;
+    background-color: grey;
+    padding: 10px;
+    color: white;
+}
+
+.gauche{
+    width: 25%;
+    background-color: beige;
+    padding: 10px;
+}
+
+.gauche .box{
+    margin-bottom: 10px;
+}
+
+.infos{
+    width: 100%;
+}
+
+.sec{
+    display: flex;
+}
+
+
+.noms{
+    background-color: blue;
+    padding: 10px;
+}
+
+.grpco{
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+.nbco{
+    background-color: aqua;
+    padding: 10px;
+}
+
+.groupes{
+    background-color: purple;
+    padding: 10px;
+}
+
+.text{
+    background-color: grey;
+    padding: 10px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}

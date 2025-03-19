@@ -1,0 +1,81 @@
+Notice
+Voici comment utliser le tchat !
+
+Connexion client
+
+- Client : NAME <pseudo>
+- Serveur : HELO <pseudo>
+
+Création de groupe
+
+- Client : CRGP <N> <groupe> (où N est la taille max du groupe)
+- Serveur : INTO <groupe> 1 (suivi du pseudo du client sur la ligne suivante)
+
+Rejoignement d'un groupe
+
+- Client : JOIN <groupe>
+- Serveur : INTO <groupe> <N> (suivi des N pseudos, un par ligne, dont celui du client)
+           : ANEW <pseudo> dans le groupe 
+
+Dérejoignement d'un groupe
+
+- Client : QUIT <groupe>
+- Serveur : LEFT
+          : QUIT <pseudo> dans le groupe si il reste du monde (sinon le groupe est supprimé)
+
+Envoie message de groupe
+
+- Client : MESS <groupe> <message>
+- Serveur : MESS <groupe> <pseudo> <message> dans le groupe
+
+Envoie de message privé
+
+- Client : PRIV <pseudo> <message>
+- Serveur : PRIV <pseudo> <message> (à l'émetteur également)
+
+Demande de la liste des clients connectés
+
+- Client : LIST
+- Serveur : LIST <N> (suivi des N pseudos, un par ligne, dont celui du client)
+
+Demande de la liste des groupes existants
+
+- Client : GRPL
+- Serveur : GRPL <N> (suivi des N groupes, un par ligne)
+
+Demande de la liste des membres d'un groupe
+
+- Client : MEMB <groupe>
+- Serveur : INTO <groupe> <N> (suivi des N pseudos, un par ligne, dont celui du client)
+
+Déconnexion client
+
+- Client : EXIT
+- Serveur : EXIT <pseudo> (à tout le monde)
+
+Ping
+
+- Client : PING
+- Serveur : PONG
+
+Ping obligatoire toutes les 15 secondes, sinon le serveur considère que le client est déconnecté.
+
+Table des codes d'erreur
+
+Code    Signification
+0*      Erreur serveur
+10      Client non identifié
+11      Client déjà identifié
+12      Nom invalide
+13      Nom déjà pris
+14      Nom inexistant
+15      Serveur plein
+16      Groupe plein
+17      Taille incorrecte
+18      Client non membre du groupe
+
+Noms invalides :
+
+- Contient un espace
+- Moins de 1 caractère
+- Plus de 25 caractères
